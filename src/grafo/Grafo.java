@@ -1,4 +1,3 @@
-
 package grafo;
 
 public class Grafo {
@@ -8,7 +7,7 @@ public class Grafo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    
+
     }
-    
+
 }
