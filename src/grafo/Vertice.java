@@ -1,6 +1,6 @@
 
 package grafo;
 
-public class Aresta {
+public class Vertice {
     
 }
