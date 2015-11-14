@@ -1,5 +1,7 @@
 package grafo;
 
+import java.util.ArrayList;
+
 public class Grafo {
 
     /**
@@ -7,6 +9,7 @@ public class Grafo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ArrayList<Aresta> Grafo = new ArrayList<>();
 
     }
 
