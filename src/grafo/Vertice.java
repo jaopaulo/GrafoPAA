@@ -1,8 +1,13 @@
-
 package grafo;
 
 public class Vertice {
+
+    private final String ponto;
     
-    int valor;
-    
+    public Vertice(String valor){
+        
+        this.ponto = valor;
+        
+    }
+
 }
