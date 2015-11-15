@@ -8,33 +8,34 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       Grafo Grafo = new Grafo();
 
-        Grafo.addArestas(new Aresta("A", "B")); 
-        Grafo.addArestas(new Aresta("A", "D")); 
-        Grafo.addArestas(new Aresta("B", "C")); 
-        Grafo.addArestas(new Aresta("C", "D")); 
-        Grafo.addArestas(new Aresta("C", "E")); 
-        Grafo.addArestas(new Aresta("D", "E")); 
+        Grafo Grafo = new Grafo();
+
+        Grafo.addArestas(new Aresta("A", "B"));
+        Grafo.addArestas(new Aresta("A", "D"));
+        Grafo.addArestas(new Aresta("B", "C"));
+        Grafo.addArestas(new Aresta("C", "D"));
+        Grafo.addArestas(new Aresta("C", "E"));
+        Grafo.addArestas(new Aresta("D", "E"));
         Grafo.addArestas(new Aresta("E", "F"));
         Grafo.addArestas(new Aresta("E", "G"));
-        
+
         listVertex(Grafo);
     }
 //    vertice(): listagem dos vertices
-    private static void listVertex(ArrayList<Aresta> grafo){
-        for(Aresta aresta: grafo ){
-            System.out.println("Vertice : "+aresta.getVerticeA());
-        }
+
+    private static void listVertex(Grafo grafo) {
+       
     }
 //numVertices(): numero de arestas
-    private static void numArestas(ArrayList<Aresta> grafo){
-        
+
+    private static void numArestas(Grafo grafo) {
+
     }
 //edges():listagem das arestas
-    private static void listArestas(){
-        
+
+    private static void listArestas(Grafo grafo) {
+
     }
 //nunedges():numero de arestas
 //degree(v):grau do vertice v (a quantidade de arestas que ele possui)
@@ -49,6 +50,5 @@ public class Main {
 //isTree(G):informa se um grafo é também um arvore
 //isLine(G):informa se um grafo é de linha
 //path(V1,V2): informar se existe um caminho entre V1 e V2. Se sim apresentar caminho
-    
 
 }
