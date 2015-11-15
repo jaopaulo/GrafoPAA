@@ -9,17 +9,16 @@ public class Main {
      */
     public static void main(String[] args) {
         
-        ArrayList <Aresta> Grafo; 
-        Grafo = new ArrayList<>();
+       Grafo Grafo = new Grafo();
 
-        Grafo.add(new Aresta("A", "B")); 
-        Grafo.add(new Aresta("A", "D")); 
-        Grafo.add(new Aresta("B", "C")); 
-        Grafo.add(new Aresta("C", "D")); 
-        Grafo.add(new Aresta("C", "E")); 
-        Grafo.add(new Aresta("D", "E")); 
-        Grafo.add(new Aresta("E", "F"));
-        Grafo.add(new Aresta("E", "G"));
+        Grafo.addArestas(new Aresta("A", "B")); 
+        Grafo.addArestas(new Aresta("A", "D")); 
+        Grafo.addArestas(new Aresta("B", "C")); 
+        Grafo.addArestas(new Aresta("C", "D")); 
+        Grafo.addArestas(new Aresta("C", "E")); 
+        Grafo.addArestas(new Aresta("D", "E")); 
+        Grafo.addArestas(new Aresta("E", "F"));
+        Grafo.addArestas(new Aresta("E", "G"));
         
         listVertex(Grafo);
     }
