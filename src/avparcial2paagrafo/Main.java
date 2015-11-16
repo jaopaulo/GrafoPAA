@@ -1,7 +1,5 @@
 package avparcial2paagrafo;
 
-import java.util.ArrayList;
-
 public class Main {
 
     /**
@@ -20,35 +18,44 @@ public class Main {
         Grafo.addArestas(new Aresta("E", "F"));
         Grafo.addArestas(new Aresta("E", "G"));
 
-        listVertex(Grafo);
     }
 //    vertice(): listagem dos vertices
 
-    private static void listVertex(Grafo grafo) {
-       
-    }
-//numVertices(): numero de arestas
+    private static void listVertex() {
 
-    private static void numArestas(Grafo grafo) {
+    }
+//numVertices(): numero de vertices
+
+    private static void numVertices() {
 
     }
 //edges():listagem das arestas
 
-    private static void listArestas(Grafo grafo) {
+    private static void listArestas() {
 
     }
 //nunedges():numero de arestas
+
+    private static void numArestas() {
+
+    }
 //degree(v):grau do vertice v (a quantidade de arestas que ele possui)
+
+    private static void degree() {
+
+    }
 //adjacentVertices(v):listagem de arestas que pertencem ao vertice v
+
+    private static void adjacentVertices() {
+
+    }
 //G = (V,E)
 //	V: vertices
 //	E: arestas, relacionada a dois vertices
-//	
-//Add
+
 //addVertex(v): adição de um novo vertice ao grafo
 //removeVertex(v):remoção de um vertice exixtente do grafo
 //isTree(G):informa se um grafo é também um arvore
 //isLine(G):informa se um grafo é de linha
 //path(V1,V2): informar se existe um caminho entre V1 e V2. Se sim apresentar caminho
-
 }
