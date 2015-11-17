@@ -131,7 +131,7 @@ public class Main {
 //        for (Aresta adjacentes : aux) {
 //            System.out.println("( " + adjacentes.getVertice1()+" )-------( " + adjacentes.getVertice2() + " )");
 //        }
-        System.out.println("Grau( "+ vDegree +" ) = " + cont );
+        System.out.println("Grau( " + vDegree + " ) = " + cont);
 //        aux.clear();
     }
 //adjacentVertices(v):listagem de arestas que pertencem ao vertice v
@@ -149,6 +149,7 @@ public class Main {
             System.out.println("Vertice ( " + vAdjacente + " )não existe no Grafo");
             return;
         }
+        System.out.println("Vertice Adjacentes de " + vAdjacente);
         for (Aresta adjacentes : aux) {
             System.out.println("( " + adjacentes.getVertice1() + " )-------( " + adjacentes.getVertice2() + " )");
         }
