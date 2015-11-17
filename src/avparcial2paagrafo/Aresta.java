@@ -2,20 +2,20 @@ package avparcial2paagrafo;
 
 public class Aresta {
 
-    String verticeA, verticeB;
+    Vertice vertice1, vertice2;
 
-    public Aresta(String verticeA, String verticeB) {
-        this.verticeA = verticeA;
-        this.verticeB = verticeB;
+    public Aresta(String vertice1, String vertice2) {
+        this.vertice1 = new Vertice(vertice1);
+        this.vertice2 = new Vertice(vertice2);
 
     }
 
-    public String getVerticeA() {
-        return verticeA;
+    public String getVertice1() {
+        return vertice1.getValor();
     }
 
-    public String getVerticeB() {
-        return verticeB;
+    public String getVertice2() {
+        return vertice2.getValor();
     }
    
 }
