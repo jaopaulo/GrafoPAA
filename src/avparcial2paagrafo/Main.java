@@ -113,7 +113,6 @@ public class Main {
 //degree(v):grau do vertice v (a quantidade de arestas que ele possui)
 
     private static void degree(Grafo grafo, String vDegree) {
-        //ArrayList<Aresta> aux = new ArrayList<>();
         int cont = 0;
         for (Aresta arestas : grafo.listaDeArestas()) {
             if (vDegree.equals(arestas.getVertice1())) {
@@ -124,15 +123,11 @@ public class Main {
                 cont++;
             }
         }
-//        if(aux.isEmpty()){
-//            System.out.println("Vertice ( " + vAdjacente + " )não existe no Grafo");
-//            return;
-//        }
-//        for (Aresta adjacentes : aux) {
-//            System.out.println("( " + adjacentes.getVertice1()+" )-------( " + adjacentes.getVertice2() + " )");
-//        }
-        System.out.println("Grau( " + vDegree + " ) = " + cont);
-//        aux.clear();
+        if (cont == 0) {
+            System.out.println("Vertice " + vDegree + "não existe no grafo");
+        } else {
+            System.out.println("Grau( " + vDegree + " ) = " + cont);
+        }
     }
 //adjacentVertices(v):listagem de arestas que pertencem ao vertice v
 
