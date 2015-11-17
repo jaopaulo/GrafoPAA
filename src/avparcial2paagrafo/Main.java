@@ -29,7 +29,8 @@ public class Main {
                 + "3 - edges():listagem das arestas\n"
                 + "4 - nunedges():numero de arestas\n"
                 + "5 - degree(v):grau do vertice v (a quantidade de arestas que ele possui)\n"
-                + "6 - adjacentVertices(v):listagem de arestas que pertencem ao vertice v");
+                + "6 - adjacentVertices(v):listagem de arestas que pertencem ao vertice v\n"
+                + "0 - Sair");
         System.out.print("Escolha um opcao : ");
         menu = sc.nextInt();
         switch (menu) {
@@ -61,11 +62,11 @@ public class Main {
     private static void listVertices(Grafo grafo) {
         ArrayList<String> aux = new ArrayList<>();
         for (Aresta arestas : grafo.listaDeArestas()) {
-            if (!aux.contains(arestas.vertice1.getValor())) {
-                aux.add(arestas.vertice1.getValor());
+            if (!aux.contains(arestas.vertice1.getVertice())) {
+                aux.add(arestas.vertice1.getVertice());
             }
-            if (!aux.contains(arestas.vertice2.getValor())) {
-                aux.add(arestas.vertice2.getValor());
+            if (!aux.contains(arestas.vertice2.getVertice())) {
+                aux.add(arestas.vertice2.getVertice());
             }
         }
         for (String vertice : aux) {
@@ -78,11 +79,11 @@ public class Main {
     private static void numVertices(Grafo grafo) {
         ArrayList<String> aux = new ArrayList<>();
         for (Aresta arestas : grafo.listaDeArestas()) {
-            if (!aux.contains(arestas.vertice1.getValor())) {
-                aux.add(arestas.vertice1.getValor());
+            if (!aux.contains(arestas.vertice1.getVertice())) {
+                aux.add(arestas.vertice1.getVertice());
             }
-            if (!aux.contains(arestas.vertice2.getValor())) {
-                aux.add(arestas.vertice2.getValor());
+            if (!aux.contains(arestas.vertice2.getVertice())) {
+                aux.add(arestas.vertice2.getVertice());
             }
         }
         System.out.println("numero de Vertices : " + aux.size());
@@ -92,7 +93,7 @@ public class Main {
     private static void listArestas(Grafo grafo) {
         System.out.println("Arestas");
         for (Aresta arestas : grafo.listaDeArestas()) {
-            System.out.println("( " + arestas.vertice1.getValor() + " )--------( " + arestas.vertice2.getValor() + " )");
+            System.out.println("( " + arestas.vertice1.getVertice() + " )--------( " + arestas.vertice2.getVertice() + " )");
         }
     }
 //nunedges():numero de arestas

@@ -10,7 +10,7 @@ public class Vertice {
 
     }
 
-    public String getValor() {
+    public String getVertice() {
         return vertice;
     }
 }

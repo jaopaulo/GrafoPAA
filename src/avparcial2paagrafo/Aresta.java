@@ -11,11 +11,11 @@ public class Aresta {
     }
 
     public String getVertice1() {
-        return vertice1.getValor();
+        return vertice1.getVertice();
     }
 
     public String getVertice2() {
-        return vertice2.getValor();
+        return vertice2.getVertice();
     }
    
 }
