@@ -142,13 +142,13 @@ public class Main {
         }
         if (aux.isEmpty()) {
             System.out.println("Vertice ( " + vAdjacente + " )não existe no Grafo");
-            return;
+        } else {
+            System.out.println("Vertice Adjacentes de " + vAdjacente);
+            for (Aresta adjacentes : aux) {
+                System.out.println("( " + adjacentes.getVertice1() + " )-------( " + adjacentes.getVertice2() + " )");
+            }
+            aux.clear();
         }
-        System.out.println("Vertice Adjacentes de " + vAdjacente);
-        for (Aresta adjacentes : aux) {
-            System.out.println("( " + adjacentes.getVertice1() + " )-------( " + adjacentes.getVertice2() + " )");
-        }
-        aux.clear();
     }
 
 //G = (V,E)
