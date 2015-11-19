@@ -1,6 +1,5 @@
 package avparcial2paagrafo;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -36,26 +35,26 @@ public class Main {
         menu = Integer.parseInt(sc.nextLine());
         switch (menu) {
             case 1://lista de vertices
-                listVertices(Grafo);
+                //listVertices(Grafo);
                 break;
             case 2://numero de vertices
-                numVertices(Grafo);
+                // numVertices(Grafo);
                 break;
             case 3://lista de arestas
-                listArestas(Grafo);
+                //listArestas(Grafo);
                 break;
             case 4://numero de arestas
-                numArestas(Grafo);
+                //numArestas(Grafo);
                 break;
             case 5://grau do vertice v
                 System.out.print("Digite o vertice para saber seu Grau: ");
                 va = sc.nextLine();
-                degree(Grafo, va);
+                //degree(Grafo, va);
                 break;
             case 6://vertices adjaventes ao vertice v
                 System.out.print("Digite o vertice para ver seus Adjacentes: ");
                 va = sc.nextLine();
-                adjacentVertices(Grafo, va);
+                //adjacentVertices(Grafo, va);
                 break;
             default:
                 break;
@@ -64,99 +63,4 @@ public class Main {
     }
 //    vertice(): listagem dos vertices
 
-    private static void listVertices(Grafo grafo) {
-        ArrayList<String> aux = new ArrayList<>();
-        for (Aresta arestas : grafo.listaDeArestas()) {
-            if (!aux.contains(arestas.getVertice1())) {
-                aux.add(arestas.getVertice1());
-            }
-            if (!aux.contains(arestas.getVertice2())) {
-                aux.add(arestas.getVertice2());
-            }
-        }
-        for (String vertice : aux) {
-            System.out.println("Vertice:" + vertice);
-        }
-        aux.clear();
-    }
-//numVertices(): numero de vertices
-
-    private static void numVertices(Grafo grafo) {
-        ArrayList<String> aux = new ArrayList<>();
-        for (Aresta arestas : grafo.listaDeArestas()) {
-            if (!aux.contains(arestas.getVertice1())) {
-                aux.add(arestas.getVertice1());
-            }
-            if (!aux.contains(arestas.getVertice2())) {
-                aux.add(arestas.getVertice1());
-            }
-        }
-        System.out.println("numero de Vertices : " + aux.size());
-        aux.clear();
-    }
-//edges():listagem das arestas
-
-    private static void listArestas(Grafo grafo) {
-        System.out.println("Arestas");
-        for (Aresta arestas : grafo.listaDeArestas()) {
-            System.out.println("( " + arestas.getVertice1() + " )--------( " + arestas.getVertice2() + " )");
-        }
-    }
-//nunedges():numero de arestas
-
-    private static void numArestas(Grafo grafo) {
-        ArrayList<Aresta> aux = grafo.listaDeArestas();
-
-        System.out.println("Numero de Arestas : " + aux.size());
-
-    }
-//degree(v):grau do vertice v (a quantidade de arestas que ele possui)
-
-    private static void degree(Grafo grafo, String vDegree) {
-        int cont = 0;
-        for (Aresta arestas : grafo.listaDeArestas()) {
-            if (vDegree.equals(arestas.getVertice1())) {
-                //aux.add(arestas);
-                cont++;
-            } else if (vDegree.equals(arestas.getVertice2())) {
-                //aux.add(arestas);
-                cont++;
-            }
-        }
-        if (cont == 0) {
-            System.out.println("Vertice " + vDegree + "não existe no grafo");
-        } else {
-            System.out.println("Grau( " + vDegree + " ) = " + cont);
-        }
-    }
-//adjacentVertices(v):listagem de arestas que pertencem ao vertice v
-
-    private static void adjacentVertices(Grafo grafo, String vAdjacente) {
-        ArrayList<Aresta> aux = new ArrayList<>();
-        for (Aresta arestas : grafo.listaDeArestas()) {
-            if (vAdjacente.equals(arestas.getVertice1())) {
-                aux.add(arestas);
-            } else if (vAdjacente.equals(arestas.getVertice2())) {
-                aux.add(arestas);
-            }
-        }
-        if (aux.isEmpty()) {
-            System.out.println("Vertice ( " + vAdjacente + " )não existe no Grafo");
-        } else {
-            System.out.println("Vertice Adjacentes de " + vAdjacente);
-            for (Aresta adjacentes : aux) {
-                System.out.println("( " + adjacentes.getVertice1() + " )-------( " + adjacentes.getVertice2() + " )");
-            }
-            aux.clear();
-        }
-    }
-
-//G = (V,E)
-//	V: vertices
-//	E: arestas, relacionada a dois vertices
-//addVertex(v): adição de um novo vertice ao grafo
-//removeVertex(v):remoção de um vertice exixtente do grafo
-//isTree(G):informa se um grafo é também um arvore
-//isLine(G):informa se um grafo é de linha
-//path(V1,V2): informar se existe um caminho entre V1 e V2. Se sim apresentar caminho
 }
